@@ -12,6 +12,11 @@
     "baseUrl": "./",
     "incremental": true,
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "paths": {
+      "src/*": [
+        "./src/*"
+      ]
+    }
   }
 }

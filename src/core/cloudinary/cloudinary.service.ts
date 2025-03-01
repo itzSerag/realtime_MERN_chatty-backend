@@ -1,5 +1,4 @@
 import { Injectable } from '@nestjs/common';
-import { isEmpty } from 'class-validator';
 import { v2 as cloudinary } from 'cloudinary';
 
 @Injectable()

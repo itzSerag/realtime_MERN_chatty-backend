@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { UserService } from 'src/modules/user/user.service';
 import { MessageRepo } from './message.repo';
 import { Types } from 'mongoose';
-import { CloudinaryService } from 'src/core/cloudinary/cloudinary.service';
+import { CloudinaryService } from "src/core/cloudinary"
 import { WebSocketsGateway } from 'src/socket/socket.provider';
 import { log } from 'console';
 

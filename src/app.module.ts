@@ -7,10 +7,9 @@ import { JwtModule } from "@nestjs/jwt";
 import { MessageModule } from './modules/message/message.module';
 import { CloudinaryModule } from './core/cloudinary/cloudinary.module';
 import { SocketModule } from './socket/socket.module';
-import { AppController } from './app.controller';
 
 @Module({
   imports: [DatabaseModule, ConfigModule, UserModule, AuthModule, JwtModule, MessageModule, CloudinaryModule, SocketModule],
-  controllers: [AppController],
+  controllers: [],
 })
 export class AppModule { }
