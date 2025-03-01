@@ -7,22 +7,15 @@ import {
     Param,
     Delete,
     UseGuards,
-    UseInterceptors,
-    UploadedFile,
     BadRequestException,
 } from "@nestjs/common";
 import { UserService } from "./user.service";
 import { CreateUserDto } from "./dto/create-user.dto";
 import { UpdateUserDto } from "./dto/update-user.dto";
-import { RolesGuard } from "../auth/guards/roles.guard";
 import { JwtAuthGuard } from "../auth/guards/jwt.guard";
-import { Role } from "./enums/role.enum";
-import { Roles } from "../auth/decorators/roles.decorator";
 import { CurrentUser } from "../auth/decorators/user.decorator";
 import { UserDocument } from "./model/user.schema";
-import { FileInterceptor } from "@nestjs/platform-express";
-import * as multer from 'multer'
-import { log } from "console";
+
 
 
 // MUST user auth guard before roles guard MUST
