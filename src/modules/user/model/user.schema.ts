@@ -1,5 +1,5 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
-import { AbstractDocument } from "src/core/database/database.schema";
+import { AbstractDocument } from "../../../core/database/database.schema";
 import { Role } from "../enums/role.enum";
 
 // userId --> the mongoId
