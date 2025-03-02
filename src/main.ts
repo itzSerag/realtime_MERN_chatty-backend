@@ -1,6 +1,6 @@
 import { NestFactory } from "@nestjs/core";
 import { AppModule } from "./app.module";
-import * as cookieParser from "cookie-parser";
+import cookieParser from "cookie-parser";
 import * as dotenv from "dotenv";
 import { ValidationPipe, VersioningType } from "@nestjs/common";
 import { AllExceptionsFilter } from "./core/errors/errors.global.filter";

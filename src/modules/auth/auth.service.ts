@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { UserDocument } from '../user/model/user.schema';
 import { Response } from 'express';
 import { ConfigService } from '@nestjs/config';
-import * as ms from 'ms';
+import ms from 'ms';
 import { JwtService } from '@nestjs/jwt';
 import { UserService } from '../user/user.service';
 import { ITokenPayload } from './interface/token-payload.interface';
@@ -17,12 +17,10 @@ export class AuthService {
     ) { }
 
     async signup(createUserDto: CreateUserDto, response: Response) {
-
         const user = await this.userService.create(createUserDto);
         this.setAuthCookie(user, response);
         delete user.password
         return user;
-
     }
 
     login(user: UserDocument, response: Response): void {
@@ -46,11 +44,12 @@ export class AuthService {
     }
 
     private createToken(payload: ITokenPayload): { token: string; expires: Date } {
-        const expiresInMs = ms(this.configService.get('JWT_EXPIRE')); // Ensure JWT_EXPIRE is in a valid format (e.g., '7d')
+        const jwtExpire = this.configService.get('JWT_EXPIRE') || '7d';
+        const expiresInMs = ms(jwtExpire);
         const expires = new Date(Date.now() + expiresInMs);
 
         const token = this.jwtService.sign(payload, {
-            expiresIn: expiresInMs, // Ensure JWT expiration matches cookie expiration
+            expiresIn: jwtExpire,
         });
 
         return { token, expires };
