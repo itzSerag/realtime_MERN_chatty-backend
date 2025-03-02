@@ -16,7 +16,7 @@ async function bootstrap() {
 
     // Enable CORS for Vercel
     app.enableCors({
-        origin: '*',
+        origin: ['https://realtime-mern-chatty-frontend.vercel.app'],
         credentials: true,
         methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
         allowedHeaders: ['Content-Type', 'Accept', 'Authorization'],

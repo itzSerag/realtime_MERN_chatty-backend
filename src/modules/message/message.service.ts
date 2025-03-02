@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import { UserService } from 'src/modules/user/user.service';
+import { UserService } from '../../modules/user/user.service';
 import { MessageRepo } from './message.repo';
 import { Types } from 'mongoose';
 import { CloudinaryService } from "../../core/cloudinary"
-import { WebSocketsGateway } from 'src/socket/socket.provider';
+import { WebSocketsGateway } from '../../socket/socket.provider';
 import { log } from 'console';
 
 @Injectable()
