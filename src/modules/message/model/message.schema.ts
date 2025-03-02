@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import { SchemaTypes, Types } from "mongoose";
-import { AbstractDocument } from "src/core/database/database.schema";
+import { AbstractDocument } from "../../../core/database/database.schema";
 
 @Schema({ timestamps: true })
 export class MessageDocument extends AbstractDocument {

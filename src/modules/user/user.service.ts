@@ -5,7 +5,7 @@ import { UserRepo } from "./user.repo";
 import * as bcrypt from 'bcrypt'
 import { log } from "console";
 import { UserDocument } from "./model/user.schema";
-import { CloudinaryService } from "src/core/cloudinary/cloudinary.service";
+import { CloudinaryService } from "../../core/cloudinary/cloudinary.service";
 
 @Injectable()
 export class UserService {

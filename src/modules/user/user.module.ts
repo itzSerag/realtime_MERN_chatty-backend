@@ -1,10 +1,10 @@
 import { Module } from "@nestjs/common";
 import { UserService } from "./user.service";
 import { UserController } from "./user.controller";
-import { DatabaseModule } from "src/core/database";
+import { DatabaseModule } from "../../core/database";
 import { UserRepo } from "./user.repo";
 import { UserDocument, UserSchema } from "./model/user.schema";
-import { CloudinaryModule } from "src/core/cloudinary";
+import { CloudinaryModule } from "../../core/cloudinary";
 
 @Module({
     imports: [

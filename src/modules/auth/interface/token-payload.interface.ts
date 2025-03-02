@@ -1,8 +1,6 @@
-import { Role } from "src/modules/user/enums/role.enum"
-
+import { Role } from "../../user/enums/role.enum"
 
 export interface ITokenPayload {
-
-    _id: string
-    role: Role
+    _id: string;
+    role?: Role;
 } 
