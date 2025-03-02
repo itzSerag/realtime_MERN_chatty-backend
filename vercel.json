@@ -2,17 +2,17 @@
     "version": 2,
     "builds": [
         {
-            "src": "src/main.ts",
+            "src": "dist/main.js",
             "use": "@vercel/node",
             "config": {
-                "includeFiles": ["src/**/*"]
+                "includeFiles": ["dist/**"]
             }
         }
     ],
     "rewrites": [
         {
             "source": "/api/v1/(.*)",
-            "destination": "/src/main.ts"
+            "destination": "/dist/main.js"
         }
     ],
     "headers": [
