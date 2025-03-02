@@ -6,7 +6,6 @@
   "license": "MIT",
   "scripts": {
     "build": "nest build",
-    "vercel-build": "npm install && nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
